@@ -1,48 +1,68 @@
-.skills {
-  padding: 80px 10%;
-}
+🛒 Retail Sales Data Warehouse Project
+📌 Overview
 
-.skills .title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
-}
+This project simulates the design and implementation of a Retail Sales Data Warehouse using SQL. The goal is to build a robust data model that enables efficient reporting and insights for business decision-making in a retail environment.
 
-.skills .title span {
-  color: #ff00ff;
-}
+🗂️ Features
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+Created Fact and Dimension tables using Star Schema
 
-.skill-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #ff00ff;
-  border-radius: 12px;
-  padding: 22px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+Performed data cleaning and standardization from raw sales, store, product, and date datasets
 
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
-}
+Applied incremental loading logic for maintaining dimension tables
 
-.skill-card h3 {
-  color: #ff00ff;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
+Derived business insights through SQL queries (e.g., top products, store performance, seasonal trends)
 
-.skill-card ul {
-  padding-left: 18px;
-}
+Ensured data consistency with normalization and basic validation checks
 
-.skill-card ul li {
-  font-size: 14px;
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
+🧱 Data Model
+
+FactSales: Captures transactional data (Quantity, Revenue, Cost, Profit)
+
+DimProduct: Contains product attributes (Name, Category, SubCategory, Prices)
+
+DimStore: Contains store attributes (City, Region, Manager, Contact)
+
+DimDate: Captures date, month, and year breakdown for time-based analysis
+
+🧼 Data Transformation
+
+Removed nulls, duplicates, and inconsistent values (e.g., mixed case, symbols like ₹ or k/L in revenue)
+
+Unified formats (e.g., product names, region names, date fields)
+
+Converted columns like revenue/cost to clean numeric formats
+
+📊 Sample Insights
+
+Top 10 best-selling products by revenue
+
+Lowest profit margin items
+
+Region-wise and store-wise sales performance
+
+Monthly and quarterly sales trends
+
+Products with declining sales month-over-month
+
+🛠️ Tools Used
+
+Microsoft SQL Server (SSMS 21)
+
+SQL (DDL, DML, Joins, Aggregates, Window functions)
+
+Excel (for staging raw datasets)
+
+📄 Key SQL Concepts
+
+Star Schema Design
+
+Data Normalization (1NF, 2NF, 3NF)
+
+Joins and Aggregation
+
+Case statements, string/date functions
+
+CTEs and RANK() for advanced analytics
+
+Incremental Load Simulation
