@@ -1,4 +1,5 @@
 🛒 Retail Sales Data Warehouse Project
+
 📌 Overview
 
 This project simulates the design and implementation of a Retail Sales Data Warehouse using SQL. The goal is to build a robust data model that enables efficient reporting and insights for business decision-making in a retail environment.
